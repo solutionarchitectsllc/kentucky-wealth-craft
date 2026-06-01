@@ -18,7 +18,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
-      <div className="container-x flex h-18 items-center justify-between py-3">
+      <div className="container-x flex h-[4.5rem] items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src={logo} alt="Solution Architects LLC logo" width={40} height={40} className="h-10 w-10" />
           <div className="leading-tight">
