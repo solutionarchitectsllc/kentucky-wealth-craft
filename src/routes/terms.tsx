@@ -8,9 +8,9 @@ export const Route = createFileRoute("/terms")({
       { name: "description", content: "Terms and conditions for using Solution Architects LLC services and website." },
       { property: "og:title", content: "Terms & Conditions — Solution Architects LLC" },
       { property: "og:description", content: "The rules for using our site and services." },
-      { property: "og:url", content: "/terms" },
+      { property: "og:url", content: "https://solutionarchitectsllc.net/terms" },
     ],
-    links: [{ rel: "canonical", href: "/terms" }],
+    links: [{ rel: "canonical", href: "https://solutionarchitectsllc.net/terms" }],
   }),
   component: Page,
 });

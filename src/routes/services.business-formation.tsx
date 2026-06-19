@@ -14,9 +14,9 @@ export const Route = createFileRoute("/services/business-formation")({
       { name: "description", content: "Kentucky LLC formation, EIN assistance, operating agreements, and complete business launch packages from $299." },
       { property: "og:title", content: "Business Formation Services — Solution Architects LLC" },
       { property: "og:description", content: "Start your business the right way with professional LLC formation and startup support." },
-      { property: "og:url", content: "/services/business-formation" },
+      { property: "og:url", content: "https://solutionarchitectsllc.net/services/business-formation" },
     ],
-    links: [{ rel: "canonical", href: "/services/business-formation" }],
+    links: [{ rel: "canonical", href: "https://solutionarchitectsllc.net/services/business-formation" }],
   }),
   component: Page,
 });
