@@ -17,9 +17,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Solution Architects LLC | Kentucky Business & Asset Solutions" },
       { property: "og:description", content: "Build your business, increase your visibility, and recover lost assets with Solution Architects LLC." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://solutionarchitectsllc.net/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://solutionarchitectsllc.net/" }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({

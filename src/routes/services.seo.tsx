@@ -14,9 +14,9 @@ export const Route = createFileRoute("/services/seo")({
       { name: "description", content: "Local SEO and Google Business Profile optimization to help Kentucky businesses get found, generate more calls, and increase revenue." },
       { property: "og:title", content: "Google Visibility & SEO — Solution Architects LLC" },
       { property: "og:description", content: "Get found when customers search. More calls, more leads, more revenue." },
-      { property: "og:url", content: "/services/seo" },
+      { property: "og:url", content: "https://solutionarchitectsllc.net/services/seo" },
     ],
-    links: [{ rel: "canonical", href: "/services/seo" }],
+    links: [{ rel: "canonical", href: "https://solutionarchitectsllc.net/services/seo" }],
   }),
   component: Page,
 });

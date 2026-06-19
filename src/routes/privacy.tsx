@@ -8,9 +8,9 @@ export const Route = createFileRoute("/privacy")({
       { name: "description", content: "Privacy policy for Solution Architects LLC." },
       { property: "og:title", content: "Privacy Policy — Solution Architects LLC" },
       { property: "og:description", content: "How we collect, use, and protect your information." },
-      { property: "og:url", content: "/privacy" },
+      { property: "og:url", content: "https://solutionarchitectsllc.net/privacy" },
     ],
-    links: [{ rel: "canonical", href: "/privacy" }],
+    links: [{ rel: "canonical", href: "https://solutionarchitectsllc.net/privacy" }],
   }),
   component: Page,
 });

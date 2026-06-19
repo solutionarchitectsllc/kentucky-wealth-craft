@@ -13,9 +13,9 @@ export const Route = createFileRoute("/services/asset-recovery")({
       { name: "description", content: "We help eligible individuals identify and pursue surplus funds and recoverable assets. Free case evaluation." },
       { property: "og:title", content: "Asset Recovery Services — Solution Architects LLC" },
       { property: "og:description", content: "Recover assets that may be owed to you." },
-      { property: "og:url", content: "/services/asset-recovery" },
+      { property: "og:url", content: "https://solutionarchitectsllc.net/services/asset-recovery" },
     ],
-    links: [{ rel: "canonical", href: "/services/asset-recovery" }],
+    links: [{ rel: "canonical", href: "https://solutionarchitectsllc.net/services/asset-recovery" }],
   }),
   component: Page,
 });

@@ -14,9 +14,9 @@ export const Route = createFileRoute("/services/real-estate")({
       { name: "description", content: "Property research, vacant land opportunities, and investment strategy consulting for investors and property owners in Kentucky." },
       { property: "og:title", content: "Real Estate Solutions — Solution Architects LLC" },
       { property: "og:description", content: "Strategic property research and investment consulting." },
-      { property: "og:url", content: "/services/real-estate" },
+      { property: "og:url", content: "https://solutionarchitectsllc.net/services/real-estate" },
     ],
-    links: [{ rel: "canonical", href: "/services/real-estate" }],
+    links: [{ rel: "canonical", href: "https://solutionarchitectsllc.net/services/real-estate" }],
   }),
   component: Page,
 });

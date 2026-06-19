@@ -10,9 +10,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Get in touch with Solution Architects LLC. Schedule a consultation, request service, or claim your free business assessment." },
       { property: "og:title", content: "Contact Solution Architects LLC" },
       { property: "og:description", content: "Schedule a consultation or request your free business assessment." },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://solutionarchitectsllc.net/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://solutionarchitectsllc.net/contact" }],
   }),
   component: ContactPage,
 });

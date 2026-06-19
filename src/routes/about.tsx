@@ -11,9 +11,9 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Solution Architects LLC, founded by Ian Dupree Eady, helps entrepreneurs, investors, and business owners build stronger financial foundations." },
       { property: "og:title", content: "About Solution Architects LLC" },
       { property: "og:description", content: "Strategic business, visibility, real estate, and asset recovery solutions." },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://solutionarchitectsllc.net/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://solutionarchitectsllc.net/about" }],
   }),
   component: AboutPage,
 });
