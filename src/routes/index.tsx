@@ -74,17 +74,15 @@ function HomePage() {
           <img src={heroBg} alt="" width={1920} height={1080} className="h-full w-full object-cover" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.18 0.055 257 / 0.92) 0%, oklch(0.236 0.063 257 / 0.85) 60%, oklch(0.18 0.055 257 / 0.92) 100%)" }} />
         </div>
-        <div className="container-x relative py-24 md:py-36">
-          <div className="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
-            <div className="flex justify-center md:justify-start mb-8">
-              <img
-                src={logo}
-                alt="Solution Architects LLC"
-                width={400}
-                height={326}
-                className="h-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] rounded-2xl bg-white p-4 shadow-[0_0_40px_rgba(29,138,91,0.25)]"
-              />
-            </div>
+        <div className="container-x relative flex flex-col items-center py-24 md:py-36">
+          <img
+            src={logo}
+            alt="Solution Architects LLC"
+            width={400}
+            height={326}
+            className="h-auto w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] rounded-2xl bg-white p-4 shadow-[0_0_40px_rgba(29,138,91,0.25)] mb-8"
+          />
+          <div className="max-w-3xl w-full text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium tracking-wider uppercase text-white/85">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-emerald-bright" />
               Kentucky • Business & Asset Solutions
