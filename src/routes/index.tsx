@@ -8,6 +8,7 @@ import {
   Target, MapPin, TrendingUp, Star, CheckCircle2, XCircle,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
