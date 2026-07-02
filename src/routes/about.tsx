@@ -2,13 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CTASection } from "@/components/CTASection";
-import { Target, Eye, HeartHandshake } from "lucide-react";
+import { Target, Eye, HeartHandshake, Mail } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Solution Architects LLC | Kentucky Business Solutions" },
-      { name: "description", content: "Solution Architects LLC, founded by Ian Dupree Eady, helps entrepreneurs, investors, and business owners build stronger financial foundations." },
+      { name: "description", content: "Solution Architects LLC, founded by Ian D Eady, helps entrepreneurs, investors, and business owners build stronger financial foundations." },
       { property: "og:title", content: "About Solution Architects LLC" },
       { property: "og:description", content: "Strategic business, visibility, real estate, and asset recovery solutions." },
       { property: "og:url", content: "https://solutionarchitectsllc.net/about" },
@@ -54,11 +54,11 @@ function AboutPage() {
             align="left"
             eyebrow="Leadership"
             title="Founded on practical experience."
-            description="Solution Architects LLC is owned and operated by Ian Dupree Eady, with a focus on helping Kentucky small businesses and individuals navigate complex paths to growth and recovery."
+            description="Solution Architects LLC is owned and operated by Ian D Eady, with a focus on helping Kentucky small businesses and individuals navigate complex paths to growth and recovery."
           />
           <div className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)]">
             <div className="text-sm font-semibold text-brand-emerald uppercase tracking-wider">Owner</div>
-            <div className="mt-2 font-display text-2xl font-bold text-brand-navy">Ian Dupree Eady</div>
+            <div className="mt-2 font-display text-2xl font-bold text-brand-navy">Ian D Eady</div>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Ian leads Solution Architects with a commitment to clear strategy, professional service, and
               results that compound over time. The firm serves clients across Kentucky and offers remote
@@ -72,6 +72,15 @@ function AboutPage() {
               <div>
                 <div className="text-muted-foreground">Mailing Address</div>
                 <div className="font-medium text-brand-navy">PO Box 3569<br/>Midway, KY 40347</div>
+              </div>
+            </div>
+            <div className="mt-6 flex items-start gap-3 text-sm">
+              <Mail className="h-4 w-4 mt-0.5 text-brand-emerald shrink-0" />
+              <div>
+                <div className="text-muted-foreground">Email</div>
+                <a href="mailto:ian.eady@solutionarchitectsllc.com" className="font-medium text-brand-navy hover:text-brand-emerald">
+                  ian.eady@solutionarchitectsllc.com
+                </a>
               </div>
             </div>
           </div>
