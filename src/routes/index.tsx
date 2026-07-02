@@ -8,6 +8,7 @@ import {
   Target, MapPin, TrendingUp, Star, CheckCircle2, XCircle,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -74,6 +75,13 @@ function HomePage() {
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.18 0.055 257 / 0.92) 0%, oklch(0.236 0.063 257 / 0.85) 60%, oklch(0.18 0.055 257 / 0.92) 100%)" }} />
         </div>
         <div className="container-x relative py-24 md:py-36">
+          <img
+            src={logo}
+            alt="Solution Architects LLC"
+            width={120}
+            height={120}
+            className="absolute top-20 right-4 hidden md:block h-20 w-20 md:h-28 md:w-28 opacity-95 drop-shadow-lg pointer-events-none"
+          />
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium tracking-wider uppercase text-white/85">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-emerald-bright" />
