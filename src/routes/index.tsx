@@ -96,7 +96,7 @@ function HomePage() {
               Helping entrepreneurs and business owners launch companies, attract more customers,
               invest in real estate, and recover money that belongs to them.
             </p>
-            <div className="mt-9 flex flex-col sm:flex-row gap-3">
+            <div className="mt-9 flex flex-col sm:flex-row justify-center gap-3">
               <Button asChild size="lg" className="bg-brand-emerald hover:bg-brand-emerald-bright text-white">
                 <Link to="/contact" hash="schedule">Schedule Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
@@ -104,7 +104,7 @@ function HomePage() {
                 <Link to="/contact" hash="assessment">Free Business Assessment</Link>
               </Button>
             </div>
-            <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-white/65">
+            <div className="mt-10 flex flex-wrap justify-center items-center gap-6 text-sm text-white/65">
               <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-brand-emerald-bright" /> Transparent pricing</div>
               <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-brand-emerald-bright" /> Midway, KY</div>
               <div className="flex items-center gap-2"><Star className="h-4 w-4 text-brand-emerald-bright" /> Results-focused</div>
