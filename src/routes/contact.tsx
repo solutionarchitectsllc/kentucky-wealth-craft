@@ -42,7 +42,7 @@ function ContactPage() {
           </div>
           <InfoBlock icon={MapPin} label="Registered Office" lines={["104 S Winter St.", "Midway, KY 40347"]} />
           <InfoBlock icon={MapPin} label="Mailing Address" lines={["PO Box 3569", "Midway, KY 40347"]} />
-          <InfoBlock icon={Mail} label="Email" lines={["contact@solutionarchitectsllc.com"]} />
+          <InfoBlock icon={Mail} label="Email" lines={["ian.eady@solutionarchitectsllc.com"]} />
           <InfoBlock icon={Clock} label="Hours" lines={["Mon–Fri: 9am – 6pm ET", "Weekend: By appointment"]} />
 
           <div className="rounded-2xl border border-brand-emerald/30 bg-brand-emerald/5 p-6">

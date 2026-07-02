@@ -41,7 +41,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm">
             <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 text-brand-emerald-bright shrink-0" /><span>PO Box 3569<br/>Midway, KY 40347</span></li>
             <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 text-brand-emerald-bright shrink-0" /><span>104 S Winter St.<br/>Midway, KY 40347</span></li>
-            <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 text-brand-emerald-bright shrink-0" /><a href="mailto:contact@solutionarchitectsllc.com" className="hover:text-brand-emerald-bright">contact@solutionarchitectsllc.com</a></li>
+            <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 text-brand-emerald-bright shrink-0" /><a href="mailto:ian.eady@solutionarchitectsllc.com" className="hover:text-brand-emerald-bright">ian.eady@solutionarchitectsllc.com</a></li>
           </ul>
         </div>
       </div>

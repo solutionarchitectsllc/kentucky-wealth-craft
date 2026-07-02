@@ -30,7 +30,7 @@ function Page() {
           <h2 className="font-display text-2xl font-bold text-brand-navy">Data retention</h2>
           <p>We retain your information only as long as needed to provide services or as required by law.</p>
           <h2 className="font-display text-2xl font-bold text-brand-navy">Contact</h2>
-          <p>Questions? Email contact@solutionarchitectsllc.com.</p>
+          <p>Questions? Email ian.eady@solutionarchitectsllc.com.</p>
         </div>
       </section>
     </SiteLayout>
