@@ -201,7 +201,7 @@ function HomePage() {
         <div className="container-x">
           <SectionHeading
             eyebrow="Client stories"
-            title={<span className="text-white">Real results, real businesses</span>}
+            title={<span className="text-white">Real solutions build foundations</span>}
             description={<span className="text-white/70">A few words from clients we've helped launch, grow, and recover.</span>}
           />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
