@@ -15,8 +15,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Solution Architects LLC | Kentucky Business, SEO & Asset Solutions" },
       { name: "description", content: "Kentucky-based business and asset solutions: LLC formation, Google visibility & SEO, real estate consulting, and asset recovery for entrepreneurs and investors." },
-      { property: "og:title", content: "Solution Architects LLC | Kentucky Business & Asset Solutions" },
-      { property: "og:description", content: "Build your business, increase your visibility, and recover lost assets with Solution Architects LLC." },
+      { property: "og:title", content: "Solution Architects LLC | Kentucky Business, SEO & Asset Solutions" },
+      { property: "og:description", content: "Kentucky-based business and asset solutions: LLC formation, Google visibility & SEO, real estate consulting, and asset recovery for entrepreneurs and investors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://solutionarchitectsllc.net/" },
     ],
