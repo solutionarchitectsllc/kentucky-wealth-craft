@@ -85,3 +85,16 @@ const footer = {
   borderTop: '1px solid #eef1f5',
   paddingTop: '16px',
 }
+const codeStyle = {
+  display: 'inline-block',
+  fontFamily: "'SFMono-Regular', Menlo, Consolas, monospace",
+  fontSize: '30px',
+  fontWeight: 'bold' as const,
+  letterSpacing: '0.22em',
+  color: '#0B2341',
+  backgroundColor: '#f4f7fa',
+  border: '1px solid #e3e8ee',
+  borderRadius: '10px',
+  padding: '14px 22px',
+  margin: '0 0 22px',
+}
