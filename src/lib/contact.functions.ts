@@ -15,18 +15,60 @@ export const submitContactRequest = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
-    const { error } = await supabaseAdmin.from("contact_submissions").insert({
+    const { data: inserted, error } = await supabaseAdmin
+      .from("contact_submissions")
+      .insert({
       name: data.name,
       business_name: data.businessName || null,
       email: data.email,
       phone: data.phone || null,
       service: data.service,
       message: data.message,
-    });
+      })
+      .select("id")
+      .single();
 
     if (error) {
       console.error("contact_submissions insert failed:", error.message);
       throw new Error("Could not save your request. Please try again.");
+    }
+
+    // Notify the business owners. Failures here must not block the visitor.
+    try {
+      const { sendInternalTransactionalEmail } = await import(
+        "@/lib/email/send-internal.server"
+      );
+      const templateData = {
+        name: data.name,
+        businessName: data.businessName || "",
+        email: data.email,
+        phone: data.phone || "",
+        service: data.service,
+        message: data.message,
+        submittedAt: new Date().toLocaleString("en-US", {
+          timeZone: "America/New_York",
+          dateStyle: "medium",
+          timeStyle: "short",
+        }),
+      };
+
+      const recipients = [
+        "ian.eady@solutionarchitectsllc.com",
+        "ianeady07@gmail.com",
+      ];
+
+      await Promise.all(
+        recipients.map((recipientEmail) =>
+          sendInternalTransactionalEmail({
+            templateName: "contact-request",
+            recipientEmail,
+            idempotencyKey: `contact-request-${inserted.id}-${recipientEmail}`,
+            templateData,
+          }),
+        ),
+      );
+    } catch (notifyError) {
+      console.error("Contact notification email failed:", notifyError);
     }
 
     return { ok: true };
