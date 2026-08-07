@@ -7,6 +7,8 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { CheckCircle2 } from "lucide-react";
+import { useServerFn } from "@tanstack/react-start";
+import { submitContactRequest } from "@/lib/contact.functions";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -30,8 +32,10 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
   const [submitted, setSubmitted] = useState(false);
   const [service, setService] = useState(defaultService ?? "");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [sending, setSending] = useState(false);
+  const sendRequest = useServerFn(submitContactRequest);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const data = {
@@ -51,8 +55,16 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       return;
     }
     setErrors({});
-    setSubmitted(true);
-    toast.success("Thanks — we'll be in touch shortly.");
+    setSending(true);
+    try {
+      await sendRequest({ data: result.data });
+      setSubmitted(true);
+      toast.success("Thanks — we'll be in touch shortly.");
+    } catch {
+      toast.error("Something went wrong. Please email ian.eady@solutionarchitectsllc.com.");
+    } finally {
+      setSending(false);
+    }
   }
 
   if (submitted) {
@@ -92,8 +104,8 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       <Field id="message" label="Message *" error={errors.message}>
         <Textarea id="message" name="message" required maxLength={2000} rows={5} placeholder="Tell us about your goals…" />
       </Field>
-      <Button type="submit" size="lg" className="w-full bg-brand-emerald hover:bg-brand-emerald-bright text-white">
-        Send Request
+      <Button type="submit" size="lg" disabled={sending} className="w-full bg-brand-emerald hover:bg-brand-emerald-bright text-white">
+        {sending ? "Sending…" : "Send Request"}
       </Button>
       <p className="text-xs text-muted-foreground text-center">
         By submitting, you agree to be contacted by Solution Architects LLC regarding your inquiry.
