@@ -104,8 +104,8 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       <Field id="message" label="Message *" error={errors.message}>
         <Textarea id="message" name="message" required maxLength={2000} rows={5} placeholder="Tell us about your goals…" />
       </Field>
-      <Button type="submit" size="lg" className="w-full bg-brand-emerald hover:bg-brand-emerald-bright text-white">
-        Send Request
+      <Button type="submit" size="lg" disabled={sending} className="w-full bg-brand-emerald hover:bg-brand-emerald-bright text-white">
+        {sending ? "Sending…" : "Send Request"}
       </Button>
       <p className="text-xs text-muted-foreground text-center">
         By submitting, you agree to be contacted by Solution Architects LLC regarding your inquiry.
