@@ -19,6 +19,7 @@ import { Route as ServicesSeoRouteImport } from './routes/services.seo'
 import { Route as ServicesRealEstateRouteImport } from './routes/services.real-estate'
 import { Route as ServicesBusinessFormationRouteImport } from './routes/services.business-formation'
 import { Route as ServicesAssetRecoveryRouteImport } from './routes/services.asset-recovery'
+import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -71,6 +72,12 @@ const ServicesAssetRecoveryRoute = ServicesAssetRecoveryRouteImport.update({
   path: '/services/asset-recovery',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LovableEmailQueueProcessRoute =
+  LovableEmailQueueProcessRouteImport.update({
+    id: '/lovable/email/queue/process',
+    path: '/lovable/email/queue/process',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -83,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/services/business-formation': typeof ServicesBusinessFormationRoute
   '/services/real-estate': typeof ServicesRealEstateRoute
   '/services/seo': typeof ServicesSeoRoute
+  '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -95,6 +103,7 @@ export interface FileRoutesByTo {
   '/services/business-formation': typeof ServicesBusinessFormationRoute
   '/services/real-estate': typeof ServicesRealEstateRoute
   '/services/seo': typeof ServicesSeoRoute
+  '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -108,6 +117,7 @@ export interface FileRoutesById {
   '/services/business-formation': typeof ServicesBusinessFormationRoute
   '/services/real-estate': typeof ServicesRealEstateRoute
   '/services/seo': typeof ServicesSeoRoute
+  '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -122,6 +132,7 @@ export interface FileRouteTypes {
     | '/services/business-formation'
     | '/services/real-estate'
     | '/services/seo'
+    | '/lovable/email/queue/process'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -134,6 +145,7 @@ export interface FileRouteTypes {
     | '/services/business-formation'
     | '/services/real-estate'
     | '/services/seo'
+    | '/lovable/email/queue/process'
   id:
     | '__root__'
     | '/'
@@ -146,6 +158,7 @@ export interface FileRouteTypes {
     | '/services/business-formation'
     | '/services/real-estate'
     | '/services/seo'
+    | '/lovable/email/queue/process'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -159,6 +172,7 @@ export interface RootRouteChildren {
   ServicesBusinessFormationRoute: typeof ServicesBusinessFormationRoute
   ServicesRealEstateRoute: typeof ServicesRealEstateRoute
   ServicesSeoRoute: typeof ServicesSeoRoute
+  LovableEmailQueueProcessRoute: typeof LovableEmailQueueProcessRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -233,6 +247,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesAssetRecoveryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lovable/email/queue/process': {
+      id: '/lovable/email/queue/process'
+      path: '/lovable/email/queue/process'
+      fullPath: '/lovable/email/queue/process'
+      preLoaderRoute: typeof LovableEmailQueueProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -247,6 +268,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesBusinessFormationRoute: ServicesBusinessFormationRoute,
   ServicesRealEstateRoute: ServicesRealEstateRoute,
   ServicesSeoRoute: ServicesSeoRoute,
+  LovableEmailQueueProcessRoute: LovableEmailQueueProcessRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
