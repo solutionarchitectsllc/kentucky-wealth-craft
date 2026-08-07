@@ -25,6 +25,7 @@ export const MagicLinkEmail = ({
     <Preview>Your login link for {siteName}</Preview>
     <Body style={main}>
       <Container style={container}>
+        <Text style={brand}>Solution Architects LLC</Text>
         <Heading style={h1}>Your login link</Heading>
         <Text style={text}>
           Click the button below to log in to {siteName}. This link will expire
@@ -43,26 +44,53 @@ export const MagicLinkEmail = ({
 
 export default MagicLinkEmail
 
-const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
-const container = { padding: '20px 25px' }
-const h1 = {
-  fontSize: '22px',
+const main = {
+  backgroundColor: '#ffffff',
+  fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif",
+}
+const container = {
+  maxWidth: '600px',
+  padding: '32px 28px',
+  border: '1px solid #e3e8ee',
+  borderRadius: '14px',
+  borderTop: '4px solid #1D8A5B',
+}
+const brand = {
+  fontSize: '13px',
   fontWeight: 'bold' as const,
-  color: '#000000',
-  margin: '0 0 20px',
+  letterSpacing: '0.14em',
+  textTransform: 'uppercase' as const,
+  color: '#1D8A5B',
+  margin: '0 0 18px',
+}
+const h1 = {
+  fontSize: '24px',
+  fontWeight: 'bold' as const,
+  color: '#0B2341',
+  margin: '0 0 18px',
 }
 const text = {
-  fontSize: '14px',
-  color: '#55575d',
-  lineHeight: '1.5',
-  margin: '0 0 25px',
+  fontSize: '15px',
+  color: '#42536a',
+  lineHeight: '1.65',
+  margin: '0 0 22px',
 }
+const link = { color: '#1D8A5B', textDecoration: 'underline' }
 const button = {
-  backgroundColor: '#000000',
+  backgroundColor: '#1D8A5B',
   color: '#ffffff',
-  fontSize: '14px',
-  borderRadius: '8px',
-  padding: '12px 20px',
+  fontSize: '15px',
+  fontWeight: 'bold' as const,
+  borderRadius: '10px',
+  padding: '14px 26px',
   textDecoration: 'none',
+  display: 'inline-block',
 }
-const footer = { fontSize: '12px', color: '#999999', margin: '30px 0 0' }
+const footer = {
+  fontSize: '12px',
+  color: '#8a97a8',
+  lineHeight: '1.6',
+  margin: '32px 0 0',
+  borderTop: '1px solid #eef1f5',
+  paddingTop: '16px',
+}
