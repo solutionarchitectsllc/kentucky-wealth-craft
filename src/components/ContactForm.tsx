@@ -61,7 +61,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       setSubmitted(true);
       toast.success("Thanks — we'll be in touch shortly.");
     } catch {
-      toast.error("Something went wrong. Please email notify@solutionarchitectsllc.com.");
+      toast.error("Something went wrong. Please email Ian.eady@solutionarchitectsllc.com.");
     } finally {
       setSending(false);
     }
