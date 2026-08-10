@@ -53,7 +53,7 @@ export const submitContactRequest = createServerFn({ method: "POST" })
       };
 
       const recipients = [
-        "ian.eady@solutionarchitectsllc.com",
+        "notify@solutionarchitectsllc.com",
         "ianeady07@gmail.com",
       ];
 
