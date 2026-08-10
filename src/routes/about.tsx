@@ -78,8 +78,8 @@ function AboutPage() {
               <Mail className="h-4 w-4 mt-0.5 text-brand-emerald shrink-0" />
               <div>
                 <div className="text-muted-foreground">Email</div>
-                <a href="mailto:notify@solutionarchitectsllc.com" className="font-medium text-brand-navy hover:text-brand-emerald">
-                  notify@solutionarchitectsllc.com
+                <a href="mailto:Ian.eady@solutionarchitectsllc.com" className="font-medium text-brand-navy hover:text-brand-emerald">
+                  Ian.eady@solutionarchitectsllc.com
                 </a>
               </div>
             </div>

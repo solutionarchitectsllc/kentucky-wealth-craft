@@ -112,7 +112,7 @@ function Page() {
               <XCircle className="mx-auto h-12 w-12 text-destructive" />
               <h1 className="mt-4 font-display text-2xl font-bold text-brand-navy">Link not valid</h1>
               <p className="mt-2 text-muted-foreground">
-                This unsubscribe link is invalid or expired. Email notify@solutionarchitectsllc.com and we'll take care of it.
+                This unsubscribe link is invalid or expired. Email Ian.eady@solutionarchitectsllc.com and we'll take care of it.
               </p>
             </>
           )}
