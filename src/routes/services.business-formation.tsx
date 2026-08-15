@@ -64,7 +64,7 @@ function Page() {
             <PricingCard
               featured
               name="Professional Startup"
-              price="$799"
+              price="$499"
               priceNote="+ State Fees"
               description="Everything in Starter plus the essentials to operate."
               features={["Everything in Starter", "Operating Agreement", "Business Email Setup", "Google Business Profile Setup", "Business Consultation"]}
