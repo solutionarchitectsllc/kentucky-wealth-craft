@@ -71,7 +71,8 @@ function Page() {
             />
             <PricingCard
               name="Elite Business Launch"
-              price="From $2,500"
+              price="$999"
+              priceNote="+ State Fees"
               description="Full infrastructure to launch and scale."
               features={["Complete Business Infrastructure", "Branding", "Website Setup", "CRM Setup", "Automation Systems", "Growth Strategy"]}
               cta="Request Quote"
