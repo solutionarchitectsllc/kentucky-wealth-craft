@@ -56,7 +56,7 @@ function Page() {
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             <PricingCard
               name="Starter LLC"
-              price="$299"
+              price="$199"
               priceNote="+ State Fees"
               description="For founders ready to file."
               features={["Name Availability Check", "LLC Filing Assistance", "EIN Guidance", "Startup Checklist"]}
