@@ -29,6 +29,15 @@ const items = [
   { icon: ShieldCheck, t: "Business Compliance Support" },
 ];
 
+const addOns: { name: string; price: string; note?: string }[] = [
+  { name: "Registered Agent Service", price: "$99", note: "/year" },
+  { name: "EIN Application Service", price: "$99" },
+  { name: "IRS Compliance Package", price: "$249" },
+  { name: "Custom Operating Agreement", price: "$199" },
+  { name: "Corporate Records Book Package", price: "$149" },
+  { name: "Business Document Bundle", price: "$249" },
+];
+
 function Page() {
   return (
     <SiteLayout>
