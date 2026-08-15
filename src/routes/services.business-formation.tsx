@@ -55,30 +55,77 @@ function Page() {
           <SectionHeading eyebrow="Packages" title="Transparent pricing built for every stage" />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             <PricingCard
-              name="Starter LLC"
+              name="Basic LLC Formation"
               price="$199"
-              priceNote="+ State Fees"
+              priceNote="+ State Filing Fees"
               description="For founders ready to file."
-              features={["Name Availability Check", "LLC Filing Assistance", "EIN Guidance", "Startup Checklist"]}
+              features={[
+                "Business name availability search",
+                "Articles of Organization preparation",
+                "State filing assistance",
+                "Operating Agreement template",
+                "EIN application guidance",
+                "Digital document delivery",
+              ]}
             />
             <PricingCard
               featured
-              name="Professional Startup"
+              name="Premium LLC Formation"
               price="$499"
-              priceNote="+ State Fees"
-              description="Everything in Starter plus the essentials to operate."
-              features={["Everything in Starter", "Operating Agreement", "Business Email Setup", "Google Business Profile Setup", "Business Consultation"]}
+              priceNote="+ State Filing Fees"
+              description="Everything in Basic plus the essentials to operate."
+              features={[
+                "Everything in Basic",
+                "Custom Operating Agreement",
+                "EIN registration assistance",
+                "Business banking setup guidance",
+                "Corporate Records Book",
+                "Ownership Certificate",
+                "Initial Member Resolution",
+                "Annual Compliance Checklist",
+              ]}
             />
             <PricingCard
               name="Elite Business Launch"
               price="$999"
-              priceNote="+ State Fees"
+              priceNote="+ State Filing Fees"
               description="Full infrastructure to launch and scale."
-              features={["Complete Business Infrastructure", "Branding", "Website Setup", "CRM Setup", "Automation Systems", "Growth Strategy"]}
-              cta="Request Quote"
+              features={[
+                "Everything in Premium",
+                "Professional website",
+                "Google Business Profile setup",
+                "Business email setup",
+                "Business phone setup consultation",
+                "Logo package",
+                "Social media setup",
+                "Business launch strategy session",
+              ]}
             />
           </div>
+          <div className="mt-10 text-center">
+            <Button asChild variant="outline" size="lg" className="border-brand-navy/20 text-brand-navy hover:bg-brand-navy hover:text-white">
+              <Link to="/pricing">View Full 2026 Service Menu &amp; Pricing <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
+          </div>
         </div>
+      </section>
+
+      <section className="container-x py-20">
+        <SectionHeading eyebrow="Add-ons" title="Popular formation add-on services" />
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {addOns.map((a) => (
+            <div key={a.name} className="rounded-2xl border border-border bg-card p-6">
+              <div className="font-semibold text-brand-navy">{a.name}</div>
+              <div className="mt-2 font-display text-xl font-bold text-brand-emerald">
+                {a.price}
+                {a.note && <span className="ml-1 text-sm font-normal text-muted-foreground">{a.note}</span>}
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-8 text-sm text-muted-foreground max-w-2xl">
+          State filing fees and third-party fees are billed separately.
+        </p>
       </section>
 
       <CTASection />
